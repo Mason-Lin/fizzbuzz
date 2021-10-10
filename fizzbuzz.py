@@ -1,0 +1,2 @@
+def result():
+    raise NotImplemented
