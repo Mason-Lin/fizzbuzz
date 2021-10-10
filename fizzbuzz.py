@@ -1,4 +1,5 @@
 def result(num):
-    if num == 1:
+    if num % 3 == 0:
+        return "fizz"
+    else:
         return str(num)
-    return "fizz"
