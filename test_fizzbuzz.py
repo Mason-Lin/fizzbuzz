@@ -1,9 +1,10 @@
 import fizzbuzz
 
+import pytest
 
-def test_fizzbuzz():
-    assert fizzbuzz.result(1) == "1"
-    assert fizzbuzz.result(2) == "2"
-    assert fizzbuzz.result(3) == "fizz"
-    assert fizzbuzz.result(4) == "4"
-    assert fizzbuzz.result(5) == "buzz"
+# ,2,3,4,5
+@pytest.mark.parametrize(
+    "num, expected", [(1, "1"), (2, "2"), (3, "fizz"), (4, "4"), (5, "buzz")]
+)
+def test_fizzbuzz(num, expected):
+    assert fizzbuzz.result(num) == expected
